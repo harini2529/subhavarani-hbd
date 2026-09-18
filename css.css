@@ -1,0 +1,459 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #fff0f6, #f5edff, #fff8fc);
+    color: #5b365f;
+    overflow-x: hidden;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 30px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    animation: appear 2s ease;
+}
+
+.crown {
+    font-size: 55px;
+    animation: floating 2s infinite ease-in-out;
+}
+
+.small-title {
+    font-size: 15px;
+    margin: 10px;
+}
+
+.hero h1 {
+    font-family: "Pacifico", cursive;
+    font-size: clamp(45px, 9vw, 90px);
+    background: linear-gradient(45deg, #e84393, #9b59b6);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero h2 {
+    font-size: clamp(35px, 7vw, 65px);
+    color: #b83280;
+    margin: 5px 0;
+}
+
+.topper {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 15px;
+}
+
+.cake {
+    font-size: 75px;
+    animation: floating 2.5s infinite ease-in-out;
+}
+
+button {
+    border: none;
+    padding: 16px 28px;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #e84393, #9b59b6);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(150, 70, 150, 0.3);
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+
+/* FLOWERS */
+
+.flower {
+    position: absolute;
+    font-size: 60px;
+    animation: floating 4s infinite ease-in-out;
+}
+
+.flower1 {
+    top: 10%;
+    left: 8%;
+}
+
+.flower2 {
+    top: 20%;
+    right: 8%;
+}
+
+.flower3 {
+    bottom: 15%;
+    left: 10%;
+}
+
+.flower4 {
+    bottom: 10%;
+    right: 10%;
+}
+
+
+/* SURPRISE */
+
+.surprise {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.card {
+    max-width: 750px;
+    margin: auto;
+    padding: 45px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 20px 50px rgba(160, 80, 160, 0.2);
+    border: 2px solid #ffd2e6;
+    animation: appear 1s ease;
+}
+
+.card h2 {
+    color: #c4459f;
+    margin-bottom: 25px;
+}
+
+.card p {
+    margin: 14px 0;
+    line-height: 1.8;
+}
+
+.card-flower {
+    font-size: 50px;
+}
+
+.highlight {
+    font-size: 22px;
+    font-weight: bold;
+    color: #d63384;
+}
+
+
+/* TOPPER */
+
+.topper-section {
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.topper-section h2,
+.memories h2 {
+    font-family: "Pacifico", cursive;
+    font-size: 42px;
+    color: #b83280;
+}
+
+.section-subtitle {
+    margin: 15px 0 40px;
+}
+
+.achievement-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.achievement {
+    width: 190px;
+    padding: 25px 15px;
+    border-radius: 25px;
+    background: white;
+    box-shadow: 0 10px 25px rgba(170, 90, 160, 0.15);
+    transition: 0.4s;
+}
+
+.achievement:hover {
+    transform: translateY(-12px) rotate(2deg);
+}
+
+.achievement span {
+    font-size: 45px;
+}
+
+.achievement h3 {
+    margin: 10px 0;
+    color: #b83280;
+}
+
+
+/* MEMORIES */
+
+.memories {
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.photo-container {
+    max-width: 1000px;
+    margin: 45px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.photo-card {
+    width: 250px;
+    padding: 15px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 12px 30px rgba(160, 80, 160, 0.18);
+    transform: rotate(-2deg);
+    transition: 0.4s;
+}
+
+.photo-card:nth-child(2) {
+    transform: rotate(2deg);
+}
+
+.photo-card:hover {
+    transform: scale(1.05) rotate(0);
+}
+
+.photo-placeholder {
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ffe0ed, #eadcff);
+    border-radius: 20px;
+    font-size: 65px;
+}
+
+.photo-card p {
+    padding: 12px;
+    font-weight: 600;
+}
+
+
+/* BIRTHDAY CARD */
+
+.birthday-card-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.birthday-card {
+    max-width: 750px;
+    margin: auto;
+    padding: 60px 40px;
+    background: #fff;
+    border-radius: 35px;
+    border: 5px double #f0a6ca;
+    box-shadow: 0 20px 50px rgba(150, 70, 150, 0.2);
+    position: relative;
+}
+
+.birthday-card h2 {
+    font-family: "Pacifico", cursive;
+    color: #b83280;
+    margin-bottom: 30px;
+}
+
+.birthday-card p {
+    line-height: 1.8;
+    margin: 15px;
+}
+
+.birthday-card h3 {
+    color: #d63384;
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+.corner {
+    position: absolute;
+    font-size: 45px;
+}
+
+.top-left {
+    top: 15px;
+    left: 20px;
+}
+
+.top-right {
+    top: 15px;
+    right: 20px;
+}
+
+.bottom-left {
+    bottom: 15px;
+    left: 20px;
+}
+
+.bottom-right {
+    bottom: 15px;
+    right: 20px;
+}
+
+
+/* FINAL */
+
+.final {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.final-content {
+    animation: floating 3s infinite ease-in-out;
+}
+
+.big-cake {
+    font-size: 90px;
+}
+
+.final h1 {
+    font-family: "Pacifico", cursive;
+    font-size: clamp(40px, 8vw, 80px);
+    color: #d63384;
+}
+
+.final h2 {
+    font-size: clamp(35px, 7vw, 65px);
+    color: #9b59b6;
+}
+
+.final p {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.hearts {
+    font-size: 35px;
+    margin-top: 30px;
+    animation: pulse 1.5s infinite;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #f8d9eb;
+}
+
+
+/* PETALS */
+
+.petal {
+    position: fixed;
+    top: -20px;
+    font-size: 20px;
+    z-index: 10;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 90vh;
+    }
+
+    .flower {
+        font-size: 40px;
+    }
+
+    .card {
+        padding: 30px 20px;
+    }
+
+    .achievement {
+        width: 150px;
+    }
+
+    .birthday-card {
+        padding: 50px 20px;
+    }
+
+    .corner {
+        font-size: 30px;
+    }
+}
+```
